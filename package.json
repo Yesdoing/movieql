@@ -5,5 +5,17 @@
   "main": "index.js",
   "repository": "https://github.com/Yesdoing/movieql.git",
   "author": "Yesdoing<fkrmtleo12@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.16.7",
+    "nodemon": "^1.18.5"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/nodemon --exec node_modules/.bin/babel-node index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1"
+  }
 }
