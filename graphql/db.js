@@ -1,40 +1,44 @@
-export const people = [
+let movies = [
+    {
+        id: 0,
+        name: 'Jone Wock',
+        score : 8
+    },
     {
         id: 1,
-        name: "Nicolas",
-        age: 18,
-        gender: "female"
+         name: 'Jone Wock - reload',
+         score: 5
     },
     {
         id: 2,
-        name: "flynn",
-        age: 18,
-        gender: "female"
+        name: 'Harry Potter',
+        score: 9
     },
     {
         id: 3,
-        name: "Dal yoon",
-        age: 18,
-        gender: "female"
+        name: 'Forest Gump',
+        score: 10
     },
     {
         id: 4,
-        name: "null",
-        age: 18,
-        gender: "female"
-    },
-    {
-        id: 5,
-        name: "sungkuk",
-        age: 18,
-        gender: "female"
-    },
-    {
-        id: 6,
-        name: "yesdoing",
-        age: 18,
-        gender: "female"
+        name: '신세계',
+        score: 5
     }
 ]
 
-export const getById = id => people.filter( person => id === person.id)[0];
+export const getMovies = () => movies;
+
+export const getById = id => {
+    const filteredMovie = movies.filter(movie => movie.id === id);
+    return filteredMovie[0];
+};
+
+export const deleteMovie = id => {
+    const cleanedMovies = movies.filter(movie => movie.id !== id);
+    if (movies.length > cleanedMovies.length) {
+        movies = cleanedMovies;
+        return true;
+    } else {
+        return false;
+    }
+}
