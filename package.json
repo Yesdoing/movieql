@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "graphql-yoga": "^1.16.7",
+    "node-fetch": "^2.2.0",
     "nodemon": "^1.18.5"
   },
   "scripts": {
